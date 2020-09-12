@@ -1,0 +1,48 @@
+from random import randint
+from time import sleep
+
+
+
+def jogo():
+    print('Selecione: \n [0] Para pedra; \n [1] Para tesoura; \n [2] Para papel.')
+    s = int(input('Sua escolha :  '))
+    c = randint(0,2)
+
+    #Checando...
+    print('JO')
+    sleep(0.5)
+    print('KEN')
+    sleep(0.5)
+    print('POOO!')
+    sleep(1)
+    print('-----------------------------=--------------------------------')
+    print('O computador escolheu {} e você {}'.format(c, s))
+    if s == c:
+        print('Empate !')
+        print('-----------------------------=--------------------------------')
+        jogo()
+    if s == 0 and c == 1:
+        print('Você ganhou !')
+        print('-----------------------------=--------------------------------')
+        jogo()
+    if s == 1 and c == 2:
+        print('Você ganhou !')
+        print('-----------------------------=--------------------------------')
+        jogo()
+    if s == 2 and c == 0:
+        print('Você ganhou !')
+        print('-----------------------------=--------------------------------')
+        jogo()
+    else:
+        print('Você perdeu !')
+        print('-----------------------------=--------------------------------')
+        jogo()
+
+
+
+
+
+
+jogo()
+
+
